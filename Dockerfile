@@ -2,8 +2,7 @@ FROM python:3.7
 
 RUN pip install Flask onnxruntime pysoundfile librosa fleep
 
-COPY model/ app/
-COPY audio_preprocessing/ app/
+COPY server/ app/
 WORKDIR /app
 
 ENV PORT 8080
